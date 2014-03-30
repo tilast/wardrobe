@@ -29,27 +29,28 @@
 		<script src="lib/tween.min.js"></script>
 		<script src="lib/sprintf.js"></script>
 		<script>
-			function getParameterByName(name) {
-			var match = RegExp('[?&]' + name + '=([^&]*)')
-							.exec(window.location.search);
-			return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-			}
-			var loadScript = getParameterByName('load');
-			if ('undefined' !== typeof loadScript) {
-				var thescript = document.createElement('script');
-				thescript.setAttribute('type','text/javascript');
-				thescript.setAttribute('src',loadScript);
-				document.getElementsByTagName('head')[0].appendChild(thescript);
-			}
-			else {
-				alert(loadScript);
-			}
+			// function getParameterByName(name) {
+			// var match = RegExp('[?&]' + name + '=([^&]*)')
+			// 				.exec(window.location.search);
+			// return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+			// }
+			// var loadScript = getParameterByName('load');
+			// if ('undefined' !== typeof loadScript) {
+			// 	var thescript = document.createElement('script');
+			// 	thescript.setAttribute('type','text/javascript');
+			// 	thescript.setAttribute('src',loadScript);
+			// 	document.getElementsByTagName('head')[0].appendChild(thescript);
+			// }
+			// else {
+			// 	alert(loadScript);
+			// }
 		</script>
+		<script src="unit4/unit4-robot_hand_exercise.js"></script>
 	</head>
 	<body>
 		<div id="container">
 		</div>
-		<script>
+		<!--<script>
 			if ( ! Detector.webgl ) {
 				Detector.addGetWebGLMessage();
 			}
@@ -172,6 +173,6 @@
 
 					document.body.insertBefore(elem,document.body.childNodes[0])
 			}
-		</script>
+		</script>-->
 	</body>
 </html>

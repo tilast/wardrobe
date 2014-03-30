@@ -2,7 +2,6 @@
 // Robot hand exercise: add a second grabber and have it respond
 ////////////////////////////////////////////////////////////////////////////////
 /*global THREE, Coordinates, $, document, window, dat*/
-
 var camera, scene, renderer;
 var cameraControls, effectController;
 var clock = new THREE.Clock();
@@ -41,7 +40,7 @@ var scale_factor = 0.08;
 function createWardrobe(w, h, d){
 
 
-	var mapUrl = "/udacity-cs291/unit4/wood_texture.png";
+	var mapUrl = "unit4/wood_texture.png";
     var map1 = THREE.ImageUtils.loadTexture(mapUrl);
 
 	wardrobe_material = new THREE.MeshPhongMaterial( { /*color: 0xA77132,*/ specular: 0xcc8811,shininess: 50, map: map1 } );
@@ -363,14 +362,16 @@ function setupGui() {
 
 }
 
-try {
-	init();
-	fillScene();
-	drawHelpers();
-	addToDOM();
-	setupGui();
-	animate();
-} catch(e) {
-	var errorReport = "Your program encountered an unrecoverable error, can not draw on canvas. Error was:<br/><br/>";
-	$('#container').append(errorReport+e);
+window.onload = function() {
+	try {
+		init();
+		fillScene();
+		drawHelpers();
+		addToDOM();
+		setupGui();
+		animate();
+	} catch(e) {
+		var errorReport = "Your program encountered an unrecoverable error, can not draw on canvas. Error was:<br/><br/>";
+		$('#container').append(errorReport+e);
+	}
 }
