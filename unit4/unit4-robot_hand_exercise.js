@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////
 // Robot hand exercise: add a second grabber and have it respond
 ////////////////////////////////////////////////////////////////////////////////
 /*global THREE, Coordinates, $, document, window, dat*/
@@ -276,7 +276,7 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 38, canvasRatio, 1, 10000 );
 	// CONTROLS
 	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
-	camera.position.set(200, 242, 300);
+	camera.position.set(-49, 242,54);
 	cameraControls.target.set(54, 106, 33);
 	fillScene();
 
@@ -304,9 +304,9 @@ function drawHelpers() {
 	if (gridZ) {
 		Coordinates.drawGrid({size:10000,scale:0.01, orientation:"z"});
 	}
-	/*if (axes) {
+	if (axes) {
 		Coordinates.drawAllAxes({axisLength:200,axisRadius:1,axisTess:50});
-	}*/
+	}
 }
 
 function animate() {
@@ -354,9 +354,9 @@ function setupGui() {
 	};
 
 	var gui = new dat.GUI();
-	gui.add(effectController, "width", 500, 2000, 1).name("width");
-	gui.add(effectController, "height", 1500, 3000, 1).name("height");
-	gui.add(effectController, "depth", 200, 1000, 1).name("depth");
+	gui.add(effectController, "width", 500, 2000, 1).name("Ширина");
+	gui.add(effectController, "height", 1500, 3000, 1).name("Высота");
+	gui.add(effectController, "depth", 200, 1000, 1).name("Глубина");
 }
 
 window.onload = function() {
