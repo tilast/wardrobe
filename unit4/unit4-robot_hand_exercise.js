@@ -354,12 +354,9 @@ function setupGui() {
 	};
 
 	var gui = new dat.GUI();
-	
-	h =gui.addFolder("Wardrobe Parameters");
-	h.add(effectController, "width", 500, 2000, 1).name("width");
-	h.add(effectController, "height", 1500, 3000, 1).name("height");
-	h.add(effectController, "depth", 200, 1000, 1).name("depth");
-
+	gui.add(effectController, "width", 500, 2000, 1).name("width");
+	gui.add(effectController, "height", 1500, 3000, 1).name("height");
+	gui.add(effectController, "depth", 200, 1000, 1).name("depth");
 }
 
 window.onload = function() {
