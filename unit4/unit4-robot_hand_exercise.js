@@ -276,7 +276,7 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 38, canvasRatio, 1, 10000 );
 	// CONTROLS
 	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
-	camera.position.set(-49, 242,54);
+	camera.position.set(200, 242,300);
 	cameraControls.target.set(54, 106, 33);
 	fillScene();
 
@@ -304,9 +304,9 @@ function drawHelpers() {
 	if (gridZ) {
 		Coordinates.drawGrid({size:10000,scale:0.01, orientation:"z"});
 	}
-	if (axes) {
+	/*if (axes) {
 		Coordinates.drawAllAxes({axisLength:200,axisRadius:1,axisTess:50});
-	}
+	}*/
 }
 
 function animate() {
